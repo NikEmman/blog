@@ -3,9 +3,11 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <a href="/articles/<%= article.id %>">
-        <%= article.title %>
-      </a>
+    <%# link_to is shorthand that creates a <a href> tag with article.title as text 
+    the article argument refers to the route, seen in console rails routes, prefix column %>
+
+      <%= link_to article.title, article %>
+
     </li>
   <% end %>
 </ul>
