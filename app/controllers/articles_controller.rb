@@ -20,7 +20,8 @@ class ArticlesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
+  
+  # strong parameters, whitelists form fields to be added to params
   private
     def article_params
       params.require(:article).permit(:title, :body)
